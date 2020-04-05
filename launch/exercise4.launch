@@ -1,0 +1,14 @@
+<launch>
+	<include file="$(find husky_gazebo)/launch/husky_empty_world.launch">
+		<arg name="world_name" value="$(find exercise4)/worlds/singlePillar.world"/>
+		<arg name="laser_enabled" value="true"/>
+	</include>
+	
+	<node name="exercise4" pkg="exercise4" type="exercise4" output="screen">
+		<rosparam command="load" file="$(find exercise4)/config/config.yaml"/>
+	</node>
+	
+	<node name="rviz" pkg="rviz" type="rviz" output="screen"/>
+	
+
+</launch>

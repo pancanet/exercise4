@@ -1,0 +1,3 @@
+topic_name : /scan
+queue_size : 50
+p_gain : 0.8
